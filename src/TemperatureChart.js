@@ -4,12 +4,10 @@ import {
   XYPlot,
   XAxis,
   YAxis,
-  VerticalGridLines,
   HorizontalGridLines,
-  VerticalBarSeries,
   ClimateSeries} from 'react-vis';
 
-import { fill, concat, sortBy, map, sample, zipWith } from 'lodash';
+import { fill, zipWith } from 'lodash';
 
 const MONTH_NAMES = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
@@ -37,7 +35,7 @@ class TemperatureChart extends Component {
           yType="linear"
           yDomain={[0,35]}
           width={600}
-          height={400}>
+          height={600}>
           <HorizontalGridLines tickValues={[15,20,25,30,35]} />
           <XAxis />
           <YAxis />
