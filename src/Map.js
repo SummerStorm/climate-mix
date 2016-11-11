@@ -40,6 +40,7 @@ class Map extends Component {
 
   onMouseMove(e) {
     console.log('onMouseMove', e);
+    console.log(JSON.stringify(e));
   }
 
   render() {
@@ -51,7 +52,7 @@ class Map extends Component {
         lng={coords.lng}
         zoom={4}
         loadingMessage={'Be happy'}
-        params={{v: '3.exp', key: process.env.GOOGLE_MAPS_API_KEY}}
+        params={{v: '3.exp', key: process.env.REACT_APP_GOOGLE_MAPS_API_KEY}}
         onMouseMove={this.onMouseMove}
         onMapCreated={this.onMapCreated}>
         <Marker
