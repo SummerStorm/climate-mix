@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import {Gmaps, Marker, InfoWindow, Circle} from 'react-gmaps';
-import GOOGLE_MAPS_API_KEY from "./Keys";
 
 const coords = {
   lat: 40,
@@ -52,7 +51,7 @@ class Map extends Component {
         lng={coords.lng}
         zoom={4}
         loadingMessage={'Be happy'}
-        params={{v: '3.exp', key: GOOGLE_MAPS_API_KEY}}
+        params={{v: '3.exp', key: process.env.GOOGLE_MAPS_API_KEY}}
         onMouseMove={this.onMouseMove}
         onMapCreated={this.onMapCreated}>
         <Marker
